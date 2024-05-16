@@ -42,14 +42,14 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Color.fromARGB(219, 0, 0, 0),
         actions: [
           Image.asset(
-            'assets/images/logo.png',
+            'assets/images/profile.png',
             height: 50,
           )
         ],
       ),
-      body: ListView.builder(
-        itemCount: listaAtracoes.length,
-        itemBuilder: (context, index) {
+        body: ListView.builder(
+          itemCount: listaAtracoes.length,
+         itemBuilder: (context, index) {
           final isFavorito = _listaFavoritos.contains(listaAtracoes[index]);
           return ListTile(
             title: Text(listaAtracoes[index].nome),
