@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rockinrio/lista_atracoes.dart';
+import 'package:flutter_application_1/lista_atracoes.dart';
 
 class AtracaoPage extends StatelessWidget {
   final Atracao atracao;

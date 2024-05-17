@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rockinrio/atracao_page.dart';
-import 'package:flutter_rockinrio/lista_atracoes.dart';
-import 'package:flutter_rockinrio/LoginPage.dart';
-import 'package:flutter_rockinrio/AboutPage.dart';
-import 'package:flutter_rockinrio/ChatPage.dart';
+import 'package:flutter_application_1/atracao_page.dart';
+import 'package:flutter_application_1/lista_atracoes.dart';
+import 'package:flutter_application_1/LoginPage.dart';
+import 'package:flutter_application_1/AboutPage.dart';
+import 'package:flutter_application_1/ChatPage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
