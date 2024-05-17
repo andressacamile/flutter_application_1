@@ -1,8 +1,7 @@
-
 import 'package:flutter/material.dart';
-import 'package:flutter_rockinrio/lista_atracoes.dart'
+import 'package:flutter_rockinrio/lista_atracoes.dart';
 
-  class AtracaoPage extends StatelessWidget {
+class AtracaoPage extends StatelessWidget {
   final Atracao atracao;
   AtracaoPage({Key? key, required this.atracao}) : super(key: key);
 

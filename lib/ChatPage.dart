@@ -1,10 +1,9 @@
-
 import 'package:flutter/material.dart';
 
 class ChatPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+     return Scaffold(
       appBar: AppBar(
         title: Text('Aqui vai ser um Chat'),
       ),
@@ -14,6 +13,8 @@ class ChatPage extends StatelessWidget {
           style: TextStyle(fontSize: 24),
         ),
       ),
-    );
+            
+     );
+     
   }
 }

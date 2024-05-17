@@ -6,15 +6,15 @@ import 'package:flutter_rockinrio/AboutPage.dart';
 import 'package:flutter_rockinrio/ChatPage.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage ({Key? key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-   List<Atracao> _listaFavoritos = [];
-   int _selectedIndex = 0;
+  List<Atracao> _listaFavoritos = [];
+  int _selectedIndex = 0;
 
   static List<Widget> _widgetOptions = <Widget>[
     LoginPage(), // Página de Login
@@ -22,10 +22,16 @@ class _HomePageState extends State<HomePage> {
     AboutPage(), // Página "Sobre"
   ];
 
+  
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
+    // Navegar para a página correspondente ao índice clicado
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => _widgetOptions[index]),
+    );
   }
 
   @override
@@ -39,7 +45,7 @@ class _HomePageState extends State<HomePage> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        backgroundColor: Color.fromARGB(219, 0, 0, 0),
+        backgroundColor: Color(0xFF673AB7),
         actions: [
           Image.asset(
             'assets/images/profile.png',
@@ -47,9 +53,9 @@ class _HomePageState extends State<HomePage> {
           )
         ],
       ),
-        body: ListView.builder(
-          itemCount: listaAtracoes.length,
-         itemBuilder: (context, index) {
+      body: ListView.builder(
+        itemCount: listaAtracoes.length,
+        itemBuilder: (context, index) {
           final isFavorito = _listaFavoritos.contains(listaAtracoes[index]);
           return ListTile(
             title: Text(listaAtracoes[index].nome),
@@ -76,7 +82,7 @@ class _HomePageState extends State<HomePage> {
               },
               icon: Icon(
                 isFavorito ? Icons.favorite : Icons.favorite_border,
-                color: isFavorito ? Colors.red : null,
+                color: isFavorito ? Color.fromARGB(255, 185, 78, 243) : null,
               ),
             ),
             onTap: () {
@@ -91,6 +97,8 @@ class _HomePageState extends State<HomePage> {
         },
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor:  Color.fromARGB(219, 0, 0, 0),
+        unselectedItemColor: Colors.white, // Define a cor dos ícones não selecionados
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.login),
